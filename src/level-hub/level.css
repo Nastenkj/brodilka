@@ -1,0 +1,69 @@
+@font-face {
+    font-family: GoldmanB;
+    src: url("/src/public/fonts/Goldman-Bold.ttf");
+}
+
+@font-face {
+    font-family: GoldmanR;
+    src: url("/src/public/fonts/Goldman-Regular.ttf");
+}
+
+@font-face {
+    font-family: Norm;
+    src: url("font/Bowler.ttf");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Устанавливаем высоту 100% экрана */
+    background-image: url("../start_fon.jpg");
+    background-size: cover; /* Растягивает изображение на весь экран */
+    background-position: center;
+    background-repeat: no-repeat; /* Запрещает повторение изображения */
+    position: relative;
+}
+
+.container-fluid {
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h3 {
+    font-family: Norm, serif;
+    text-align: center;
+    font-size: 5.5rem !important;
+    color: black;
+}
+
+header {
+    margin-bottom: 2rem !important;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    font-family: GoldmanB, serif;
+    font-size: 2.5rem !important;
+    width: 40%;
+    color: black !important;
+    margin-top: 2rem !important;
+    background-color: transparent !important;
+    border: 0 !important;
+}
+
+a:hover {
+    color: rgb(122, 114, 114) !important;
+}

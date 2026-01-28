@@ -1,0 +1,92 @@
+@font-face {
+    font-family: GoldmanB;
+    src: url("src/public/fonts/Goldman-Bold.ttf");
+}
+
+@font-face {
+    font-family: GoldmanR;
+    src: url("src/public/fonts/Goldman-Regular.ttf");
+}
+
+@font-face {
+    font-family: Norm;
+    src: url("font/Bowler.ttf");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Полная высота экрана */
+    background-image: url("../src/start_fon.jpg");
+    background-size: cover; /* Растягивает изображение на весь экран */
+    background-position: center;
+    background-repeat: no-repeat; /* Запрещает повторение изображения */
+    position: relative;
+}
+
+canvas#field {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Canvas будет находиться на заднем плане */
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    z-index: 1; /* Контент будет поверх канваса */
+}
+
+header h1 {
+    font-family: Norm, serif;
+    text-align: center;
+    font-size: 7rem;
+    font-weight: bold;
+    color: black;
+}
+
+.name-input {
+    margin-top: 15%;
+    text-align: center;
+    position: relative;
+}
+
+.input_group_input {
+    font-family: Norm, serif;
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: #6b6b6b;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    outline: 2px solid black;
+    background-color: transparent;
+    transition: outline-color 500ms;
+}
+
+.input_group_input:is(:focus, :valid) {
+    outline-color: rgb(0, 0, 0);
+}
+
+.input_group_label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: GoldmanR, serif;
+    font-size: 1.8rem;
+    font-weight: normal;
+    color: #6b6b6b;
+    transition: translate 500ms, scale 500ms;
+}
+
+.input_group_input:focus + .input_group_label,
+.input_group_input:valid + .input_group_label {
+    translate: 0 -4rem;
+    scale: 1;
+}

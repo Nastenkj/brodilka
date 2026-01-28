@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Игра</title>
+</head>
+<body>
+    <!-- Canvas для фонового поля -->
+    <canvas id="field"></canvas>
+
+    <div class="container">
+        <header>
+            <h1>БРОДИЛКА</h1>
+        </header>
+
+        <div class="name-input">
+            <form id="nickname-form" class="input-form" action="./src/level-hub/level-hub.html" method="get">
+                <input type="text" id="nickname-input" class="input_group_input" required />
+                <label for="nickname-input" class="input_group_label">Нажми чтобы ввести имя:</label>
+                <input type="submit" hidden="hidden" value="Enter" onclick="savePlayer(document.getElementById('nickname-input'))">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function savePlayer(nickname){
+            localStorage["maze.lastPlayer"] = nickname.value
+        }
+    </script>
+
+</body>
+</html>
